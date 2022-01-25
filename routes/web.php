@@ -18,11 +18,14 @@ Route::get('/', function () {
 });
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', [
+        "title" => "Home"
+    ]);
 });
 
 Route::get('/about', function () {
     return view('about', [
+        "title" => "About",
         "nama" => "Muhamad Fauzan",
         "email" => "3103120137@student.smktelkom-pwt.sch.id",
         "gambar" => "fauzan.jpg"
@@ -30,5 +33,7 @@ Route::get('/about', function () {
 });
 
 Route::get('/gallery', function () {
-    return view('gallery');
+    return view('gallery', [
+        "title" => "Gallery"
+    ]);
 });
