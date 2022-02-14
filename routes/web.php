@@ -37,3 +37,10 @@ Route::get('/gallery', function () {
         "title" => "Gallery"
     ]);
 });
+
+use App\Http\Controllers\ContactController;
+
+Route::resource('/contacts', ContactController::class);
+    return view('contacts', [
+        "title" => "Contacts"
+    ]);
