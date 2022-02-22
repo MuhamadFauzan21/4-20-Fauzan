@@ -18,8 +18,8 @@ Route::get('/', function () {
 });
 
 Route::get('/', function () {
-    return view('home', [
-        "title" => "Home"
+    return view('index', [
+        "title" => "Beranda"
     ]);
 });
 
@@ -41,6 +41,12 @@ Route::get('/gallery', function () {
 use App\Http\Controllers\ContactController;
 
 Route::resource('/contacts', ContactController::class);
-    return view('contacts', [
-        "title" => "Contacts"
-    ]);
+
+
+
+Auth::routes();
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+});

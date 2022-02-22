@@ -14,10 +14,10 @@
   <input type="email" class="form-control" id="inputemail" placeholder="Email" name="email">
   <label for="inputemail" class="form-label">Email</label>
 </div>
-<div class="form-floating">
+<br><div class="form-floating">
   <textarea class="form-control" placeholder="Tinggalkan pesan disini!" id="floatingTextarea2" style="height: 100px" name="pesan"></textarea>
   <label for="floatingTextarea2">Pesan</label>
-</div>
+</div></br>
   <button type="submit" class="btn btn-primary">Kirim</button>
 </form>
 @endsection
