@@ -42,8 +42,6 @@ use App\Http\Controllers\ContactController;
 
 Route::resource('/contacts', ContactController::class);
 
-
-
 Auth::routes();
 
 Route::group(['middleware' => ['auth']], function () {
